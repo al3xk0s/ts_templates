@@ -19,11 +19,11 @@ export const addMouseClickListener = (element: Element, listener: MouseEventList
         }
     }
 
-    element.addEventListener('mousedown', onMouseDown);   
-    element.addEventListener('mouseup', onClick);
+    element.addEventListener('mousedown', (ev) => onMouseDown(ev as MouseEvent));
+    element.addEventListener('mouseup', (ev) => onClick(ev as MouseEvent));
 
     return () => {
-        element.removeEventListener('mouseup', onClick);
-        element.removeEventListener('mousedown', onMouseDown);
+        element.removeEventListener('mouseup', (ev) => onClick(ev as MouseEvent));
+        element.removeEventListener('mousedown', (ev) => onMouseDown(ev as MouseEvent));
     };
 }

@@ -1,7 +1,7 @@
 export { createCustomElement, placeCustomElement } from './createElement';
 export { setStyles, cssRoundStr, replaceClass } from './styles';
 export { isMiddleMouseClick, addMouseClickListener } from './events';
-export {
+export type {
     MutableStyles,
     DomChildren,
     DomElementCreateProps,
